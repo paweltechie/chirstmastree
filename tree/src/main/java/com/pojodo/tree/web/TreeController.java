@@ -17,6 +17,9 @@ public class TreeController {
 	
 	@RequestMapping("/tree/{hight}")
 	public void printTree(@PathVariable int hight) {
-		treeService.printTree(hight);
+		String[] tree = treeService.printTree(hight);
+		for (String node : tree) {
+			System.out.println(node);
+		}
 	}
 }
